@@ -16,5 +16,16 @@ namespace BaseProgram
         {
             InitializeComponent();
         }
+
+        private bool flag = false;
+
+        private void writeFile_button_Click(object sender, EventArgs e)
+        {
+            flag = true;
+            string str1 = DateTime.Now.ToString() + "    ||    " + SystemInformation.ComputerName + "    ||    " + textInput.Text + "\n";
+            Class1 cl = new Class1();
+            cl.WFile(textBox1.Text, str1);
+            MessageBox.Show("Успешно записано!", "Сообщение", MessageBoxButtons.OK);
+        }
     }
 }

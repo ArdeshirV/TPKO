@@ -68,6 +68,7 @@
             this.writeFile_button.TabIndex = 3;
             this.writeFile_button.Text = "Записать";
             this.writeFile_button.UseVisualStyleBackColor = true;
+            this.writeFile_button.Click += new System.EventHandler(this.writeFile_button_Click);
             // 
             // informationTable
             // 
