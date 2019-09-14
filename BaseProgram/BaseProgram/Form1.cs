@@ -23,9 +23,14 @@ namespace BaseProgram
         {
             flag = true;
             string str1 = DateTime.Now.ToString() + "    ||    " + SystemInformation.ComputerName + "    ||    " + textInput.Text + "\n";
-            Class1 cl = new Class1();
-            cl.WFile(textBox1.Text, str1);
+            CText cl = new CText();
+            cl.WFile(addressFile.Text, str1);
             MessageBox.Show("Успешно записано!", "Сообщение", MessageBoxButtons.OK);
+        }
+
+        private void AddressFile_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
