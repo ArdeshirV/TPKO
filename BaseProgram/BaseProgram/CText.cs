@@ -18,7 +18,7 @@ namespace BaseProgram
             }
             else
             {
-                FileS = File.Open(FilePath, FileMode.Append);
+                FileS = File.Open(FilePath, FileMode.Open);
             }
             string Result = "";
             using (StreamReader FileOut = new StreamReader(FileS))
@@ -45,6 +45,12 @@ namespace BaseProgram
             StreamWriter FileOut = new StreamWriter(FileS);
             FileOut.Write(HText);
             FileOut.Close();
+        }
+
+        public string WhenWriteFile(string FilePath)
+        {
+            FileInfo file = new FileInfo(FilePath);
+            return file.LastWriteTime.Hour + ":" + file.LastWriteTime.Minute;
         }
     }
 }
